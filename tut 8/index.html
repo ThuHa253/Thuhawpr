@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tank 1990</title>
+</head>
+<body>
+    <script>
+        let field = document.getElementById("field");
+        let tank = document.getElementById("tank");
+        let step = 50;
+
+        function init() {
+            tank = document.getElementById('tank');
+            tank.style.position = 'relative';
+            tank.style.left = '350px';
+            tank.style.top = '300px';
+        }
+
+        function moveUp() {
+            if (parseInt(tank.style.top) <= 50 ) {
+                tank.style.top = parseInt(tank.style.top) + 'px';
+            }
+            else {
+            tank.style.top = parseInt(tank.style.top) - step + 'px';
+            }
+        }
+
+        function moveDown() {
+            if (parseInt(tank.style.top) >= 600 ) {
+                tank.style.top = parseInt(tank.style.top) + 'px';
+            }
+            else {
+            tank.style.top = parseInt(tank.style.top) + step + 'px';
+            }
+        }
+
+        function moveRight() {
+            if (parseInt(tank.style.left) >= 750 ) {
+                tank.style.left = parseInt(tank.style.left) + 'px';
+            }
+            else {
+            tank.style.left = parseInt(tank.style.left) + step + 'px';
+            }
+        }
+
+        function moveLeft() {
+            if (parseInt(tank.style.left) <= 0 ) {
+                tank.style.left = parseInt(tank.style.left) + 'px';
+            }
+            else {
+            tank.style.left = parseInt(tank.style.left) - step + 'px';
+        }
+    }
+
+    </script>
+</body>
+</html>
